@@ -33,7 +33,7 @@ function getEngines(){
     setChatlog(chatlogNew)
     const messages = chatlogNew.map((message) => message.message).join("\n")
     // this the frist fetch statement for the responses
-    const response = await fetch("https://chatter-box-backend-production.up.railway.app/models",{
+    const response = await fetch("https://chatter-box-backend-production.up.railway.app/",{
       method: "POST",
       headers:{
         "Content-Type":"application/json"
