@@ -22,7 +22,7 @@ function clearChats(){
 }
 //this is the second fetch statement for the models.
 function getEngines(){
-  fetch("https://chatter-box-backend-production.up.railway.app/models")
+  fetch("https://open-ai-backend-402e.onrender.com/models")
   .then(res => res.json())
   .then(data => setModels(data.models))
 } 
@@ -33,7 +33,7 @@ function getEngines(){
     setChatlog(chatlogNew)
     const messages = chatlogNew.map((message) => message.message).join("\n")
     // this the frist fetch statement for the responses
-    const response = await fetch("https://chatter-box-backend-production.up.railway.app/",{
+    const response = await fetch("https://open-ai-backend-402e.onrender.com/",{
       method: "POST",
       headers:{
         "Content-Type":"application/json"
