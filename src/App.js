@@ -33,7 +33,7 @@ function getEngines(){
     setChatlog(chatlogNew)
     const messages = chatlogNew.map((message) => message.message).join("\n")
     // this the frist fetch statement for the responses
-    const response = await fetch("https://chatter-box-g7xd.onrender.com",{
+    const response = await fetch("https://open-ai-backend-402e.onrender.com/",{
       method: "POST",
       headers:{
         "Content-Type":"application/json"
